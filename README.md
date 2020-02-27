@@ -15,6 +15,10 @@ Check bike rack availability on RTS busses.
     * [Using Android Studio's VCS](#chapter-5a)
     * [Using Git CLI](#chapter-5b)
     * [Manually Adding The Project To Android Studio](#chapter-5c)
+  - [Building The Project](#chapter-6)
+    * [Ensuring The Project is Functional](#chapter-6a)
+    * [Generating App Code](#chapter-6b)
+    * [Building The App for Target Devices](#chapter-6c)
 
 ### Installing Flutter SDK <a name="chapter-1"></a>
 
