@@ -11,8 +11,8 @@ class BusData {
   BusData(this.route_name, this.call_name, this.num_slots, this.slots_filled, this.coords);
 
   BusData.fromJSONs(Map<String, dynamic> routeJson, Map<String, dynamic> vehicleJson, Map<String, dynamic> sensorJson)
-    : route_name = routeJson['short_name'],
-      call_name = vehicleJson['call_name'],
+    : route_name = routeJson['short_name'].toString(),
+      call_name = vehicleJson['call_name'].toString(),
       num_slots = int.parse(sensorJson['slots_available']),
       slots_filled = int.parse(sensorJson['slots_used']),
       /*coords = Position.fromMap(()=>

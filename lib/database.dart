@@ -3,7 +3,9 @@ import 'package:geolocator/geolocator.dart';
 import 'package:http/http.dart' as http;
 import 'busdata.dart';
 
-const String baseurl = "https://mctrans.ce.ufl.edu/bikeapp";
+const String baseurl = "http://35.196.203.13";
+//const String baseurl = "https://mctrans.ce.ufl.edu/bikeapp";
+const String apipath = "/api/routes.json";
 
 //const String sensorurl = "http://mnm.ece.ufl.edu/bikerack/system.php";
 const String sensorurl = "http://35.196.203.13/data/data.json";
@@ -57,7 +59,7 @@ class BusAppBase implements AppBase{
   }
 
   Future<List<BusData>> getJSONs() async {
-    final res = await http.get(baseurl + "/api/GetRoutes");
+    final res = await http.get(baseurl + apipath);
     final sensres = await http.get(sensorurl);
     var routes;
     var sensors;
